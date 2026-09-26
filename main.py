@@ -130,8 +130,8 @@ general_ledger_df['Txn Date'] = general_ledger_df['Txn Date'].dt.strftime('%Y-%m
 bank_statement_df['Transaction_Date'] = bank_statement_df['Transaction_Date'].dt.strftime('%Y-%m-%d')
 
 # 2. Export the final cleaned files
-gl_output_path = script_dir / "data script" / "clean_general_ledger.csv"
-bank_output_path = script_dir / "data script" / "clean_bank_statement.csv"
+gl_output_path = script_dir / "clean_general_ledger.csv"
+bank_output_path = script_dir / "clean_bank_statement.csv"
 
 general_ledger_df.to_csv(gl_output_path, index=False)
 bank_statement_df.to_csv(bank_output_path, index=False)
